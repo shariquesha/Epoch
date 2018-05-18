@@ -1,0 +1,33 @@
+ {
+ 	//first three required lines
+ 	"manifest_version": 2,
+ 	"name" : "Epoch",
+ 	"version" : "1.0",
+	"description":"Chrome extension for calculating time spent on the websites.",
+ 	"author":"sharique",
+
+ 	"background": {
+    "scripts": ["background.js"]
+  	},
+
+
+  		"content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": ["content.js"]
+  }
+	],
+
+
+ 	"permissions": ["tabs","storage"],
+
+	 "browser_action":{
+ 
+ 		"default_popup":"popup.html"
+	}
+
+
+
+}
